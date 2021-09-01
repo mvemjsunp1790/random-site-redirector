@@ -1,0 +1,9 @@
+version: '2'
+services:
+  news-redirector:
+    image: mvemjsunp/random-site-redirector:latest
+    restart: always
+    ports:
+      - "8020:8000"
+    environment:
+      - SITES=https://www.bbc.co.uk/news,https://www.theguardian.com/uk,https://apnews.com,https://www.reuters.com
